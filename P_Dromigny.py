@@ -2,6 +2,9 @@
 # -*-coding:Latin-1 -*
 
 #Ce projet a été réalisé en collaboration avec Romain Bernard et Loïc Boutin
+#Author : Ivan DROMIGNY
+
+import time 
 
 def erathostene(n):
 	if n < 2:
@@ -23,8 +26,11 @@ def erathostene(n):
 	for i in xrange(racN, n, 2):
 		if tabBool[i]:
 			tabRes.append(i) 									# Si tabBool est vrai on enregistre le nouveau nombre premier
-			
+	
+	print("Résultat du crible : ")
 	return tabRes    
 
 val = input('Entrez la valeur pour le crible : ')
-print 'Le résultat est : ', erathostene(val)
+t_deb = time.time()
+print erathostene(val)
+print "Temps d'execution du crible : ",time.time()-t_deb
