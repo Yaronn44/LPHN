@@ -1,4 +1,4 @@
-#Trinome composé de : Romain BERNARD, Loïc BOUTIN, Ivan DROMIGNY
+#Trinome composÃ© de : Romain BERNARD, LoÃ¯c BOUTIN, Ivan DROMIGNY
 #Auteur : Romain BERNARD
 
 r_atosthene = function(n) {
@@ -7,10 +7,11 @@ r_atosthene = function(n) {
   i=1
   
   while (tab[i]^2 <= n) {
-    tab = tab[tab %% tab[i] != 0 | tab==tab[i]] #
+    tab = tab[tab %% tab[i] != 0 | tab==tab[i]] 
     i = i + 1
   }
   return (tab)
 }
 
-system.time(r_atosthene(1000000))
+val = readline("Entrez la valeur pour le crible : ")
+print(system.time(r_atosthene(as.integer(val))))

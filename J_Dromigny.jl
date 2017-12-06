@@ -10,3 +10,7 @@ function crible(n)
     toc()
     return primes                                               #On retourne alors les éléments n'ayant pas été filtrés
 end
+
+print("Entrez la valeur pour le crible : ")
+val = parse(UInt32, readline())
+crible(val)
