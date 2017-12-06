@@ -1,7 +1,7 @@
 #!/usr/bin/python2.6
 # -*-coding:Latin-1 -*
 
-#Ce projet a été réalisé en collaboration avec Romain Bernard et Loïc Boutin
+#Trinome composé de : Romain BERNARD, Loïc BOUTIN, Ivan DROMIGNY
 #Author : Ivan DROMIGNY
 
 import time 
