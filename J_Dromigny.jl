@@ -1,4 +1,4 @@
-#Ce projet a été réalisé en collaboration avec Romain Bernard et Loïc Boutin
+#Trinome composé de : Romain BERNARD, Loïc BOUTIN, Ivan DROMIGNY
 #Auteur : Loïc BOUTIN
 
 function crible(n)
