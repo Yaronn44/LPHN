@@ -30,7 +30,36 @@ def erathostene(n):
 	print("Résultat du crible : ")
 	return tabRes    
 
-val = input('Entrez la valeur pour le crible : ')
-t_deb = time.time()
-print erathostene(val)
-print "Temps d'execution du crible : ",time.time()-t_deb
+#Programme réalisé par: CARON Dylan
+#Groupe : BROHAN Romain, GASCOIN Samy, CARON Dylan
+#Version peu efficace (voir pas du tout)
+
+def era(nb) :
+    l = [2] 
+    insert = True
+    for cpt in [a for a in range(3,nb+1)] :
+        for a in l :
+            if (cpt % a == 0) :
+                insert = False
+        if(insert) :
+                l.append(cpt)
+        insert = True
+    return(l)
+
+def etude() :
+	for x in [1,10,100,1000,10000,100000,1000000,10000000,100000000]:
+		tabRes1 = []
+		tabRes2 = []
+		t_deb = time.time()
+		erathostene(x)
+		tabRes1 += time.time()-t_deb
+
+		t_deb = time.time()
+		era(x)
+		tabRes2 += time.time()-t_deb
+
+	println(tabRes1)
+	println(tabRes2)
+
+
+etude()
