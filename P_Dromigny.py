@@ -27,7 +27,6 @@ def erathostene(n):
 		if tabBool[i]:
 			tabRes.append(i) 									# Si tabBool est vrai on enregistre le nouveau nombre premier
 	
-	print("Résultat du crible : ")
 	return tabRes    
 
 #Programme réalisé par: CARON Dylan
@@ -46,6 +45,7 @@ def era(nb) :
         insert = True
     return(l)
 
+'''
 def etude() :
 	for x in [1,10,100,1000,10000,100000,1000000,10000000,100000000]:
 		tabRes1 = []
@@ -63,3 +63,37 @@ def etude() :
 
 
 etude()
+'''
+
+def mesure() :
+	asum1000 = 0
+  	asum100000 = 0
+  	bsum1000 = 0
+  	bsum100000 = 0
+
+	for x in range(1,11) : 
+		t_deb = time.time()
+		erathostene(1000)
+		asum1000 += time.time()-t_deb
+		t_deb = time.time()
+		erathostene(100000)
+		asum100000 += time.time()-t_deb
+
+		t_deb = time.time()
+		era(1000)
+		bsum1000 += time.time()-t_deb
+		t_deb = time.time()
+		era(100000)
+		bsum100000 += time.time()-t_deb
+
+	print("Nous 1000 : ")
+	print(asum1000/10)
+	print("Nous 100000 : ") 
+	print(asum100000/10)
+
+	print("Brohan 1000 : ")
+	print(bsum1000/10)
+	print("Brohan 100000 : ")
+	print(bsum100000/10)
+
+mesure()

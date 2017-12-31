@@ -15,3 +15,55 @@ val = parse(UInt32, readline())
 tic()
 crible(val)
 toc()
+
+function RAtoast(n)
+    T=trues(n)
+    i=0
+    j=0
+    for i = 2:n
+        if T[i]==true
+           j=(2*i)
+            while j<=n
+                T[j]=false
+                j=j+i 
+            end
+        end
+    end
+      return [i for i in 2:n if T[i]==true]
+end
+
+
+function mesure()
+
+	asum1000 = 0
+  	asum100000 = 0
+  	bsum1000 = 0
+  	bsum100000 = 0
+
+	for i = 1:10
+		tic()
+		crible(1000)
+		asum1000 += toc()
+		tic()
+		crible(100000)
+		asum100000 += toc()
+
+		tic()
+		RAtoast(1000)
+		bsum1000 += toc()
+		tic()
+		RAtoast(100000)
+		bsum100000 += toc()
+	end
+
+	print("Nous 1000 : ")
+	print(asum1000/10)
+	print("Nous 100000 : ") 
+	print(asum100000/10)
+
+	print("Brohan 1000 : ")
+	print(bsum1000/10)
+	print("Brohan 100000 : ")
+	print(bsum100000/10)
+
+end
